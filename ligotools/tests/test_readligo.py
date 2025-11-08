@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+"""
+test_readligo.py
+
+Simple tests for readligo.py
+"""
+
+import numpy as np
+from ligotools import readligo
+
+def test_dq_channel_to_seglist_simple():
+    """Test that dq_channel_to_seglist finds good data segments"""
+    # Good data = 1, bad data = 0
+    dq_channel = np.array([1, 1, 0, 0, 1, 1])
+    
+    segments = readligo.dq_channel_to_seglist(dq_channel, fs=1)
+    
+    # Should find two segments of good data
+    assert len(segments) == 2
+    assert segments[0].start == 0  # First good segment starts at index 0
+    assert segments[0].stop == 2   # and ends at index 2
+    assert segments[1].start == 4  # Second good segment starts at index 4
+    assert segments[1].stop == 6   # and ends at index 6
+
+def test_segment_list_creation():
+    """Test that SegmentList can be created from a list"""
+    seg_list = [(100, 200), (300, 400)]
+    segment_obj = readligo.SegmentList(seg_list)
+    
+    # Should contain the same segments we put in
+    assert segment_obj.seglist == seg_list
