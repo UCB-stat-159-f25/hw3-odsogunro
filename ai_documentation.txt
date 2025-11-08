@@ -39,7 +39,7 @@ def test_segment_list_creation():
     assert segment_obj.seglist == seg_list
 
 
-[todo 04 - Create utils.py and add some utilities] 
+[todo 04 - Create utils.py and add some utilities] - N/A
 
 
 [todo 05 -  Add tests to utils.py] 
