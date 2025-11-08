@@ -13,7 +13,6 @@ clean:
 	rm figures/*.png audio/*.wav 
     rm -r _build/*
 
-
 help:
 	@echo "Available targets:"
 	@echo "  env   - Install package and dependencies with pip"
