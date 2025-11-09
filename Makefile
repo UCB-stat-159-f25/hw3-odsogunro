@@ -13,8 +13,12 @@ github-pages:
 	myst init --gh-pages
 
 clean:
-	rm figures/*.png audio/*.wav 
+	@echo "Cleaning out and deleting - figures/*.png audio/*.wav"
+	rm figures/*.png audio/*.wav
+	@echo "Cleaning out and deleting - _build/"
 	rm -r _build/
+	@echo "Cleaning out and deleting - .github/"
+	rm -r .github/
 
 help:
 	@echo "Available targets:"
