@@ -1,3 +1,5 @@
+# ai_documentation.txt
+
 [todo 01 - Repository structure] N/A
 
 [todo 02 - Installable package] N/A
