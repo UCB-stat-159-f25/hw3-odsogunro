@@ -10,7 +10,7 @@
 - [x]  Add tests for readligo.py
 - [x]  Create utils.py and add some utilities
 - [x]  Add tests to utils.py
-- [x]  MyST: Local Builds and Deploying to GitHub Pages - Permissions issue pending
+- [x]  MyST: Local Builds and Deploying to GitHub Pages
 - [x]  Makefile
 - [x]  Github repository
 
